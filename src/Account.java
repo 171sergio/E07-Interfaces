@@ -81,6 +81,19 @@ public abstract class Account implements ITaxa{
         }
     }
 
+    public void printFeeStatement(){
+        double totalFee = this.calculateTax();
+        System.out.printf("=== Extrato de Taxas ===\nManutenção da conta: %.2f\n\n", this.calculateTax() );
+        System.out.println("Operações:\n");
+        for(int i = 0; i < operationCounter; i++){
+            totalFee += this.operations[i].calculateTax();
+            if(operations[i].type == 's' && operations[i].calculateTax() != 0){
+                System.out.printf("Saque: %.2f\n", operations[i].calculateTax());
+            }
+        }
+        System.out.printf("\nTotal: %.2f\n", totalFee);
+    }
+
 
     public Client getOwner() {
         return owner;

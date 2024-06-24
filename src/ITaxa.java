@@ -1,5 +1,5 @@
 public interface ITaxa {
 
-    double calculatTax();
+    double calculateTax();
 
 }

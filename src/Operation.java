@@ -27,8 +27,6 @@ public abstract class Operation implements ITaxa{
         return opStr;
     }
 
-    abstract double calculateTax();
-
     public double getAmount() {
         return amount;
     }

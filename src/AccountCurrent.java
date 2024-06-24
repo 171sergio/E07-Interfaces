@@ -1,4 +1,4 @@
-public class AccountCurrent extends Account{
+public class  AccountCurrent extends Account{
 
     public AccountCurrent(Client owner, double balance, int ID, double limit, String agency) {
         super(owner, balance, ID, limit, agency);
@@ -16,7 +16,7 @@ public class AccountCurrent extends Account{
     }
 
     @Override
-    public double calculatTax() {
+    public double calculateTax() {
         if(this.owner instanceof ClientIndividual){
             return 10;
         }
@@ -24,5 +24,8 @@ public class AccountCurrent extends Account{
             return 20;
         }
     }
+
+
+
 }
 

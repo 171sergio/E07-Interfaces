@@ -20,7 +20,7 @@ public class AccountSavings extends Account{
     }
 
     @Override
-    public double calculatTax() {
+    public double calculateTax() {
         return 0;
     }
 }
